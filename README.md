@@ -6,8 +6,9 @@
 <h1 id="ha-accessible-alexa-multi-room-audio-setup">HA Accessible Alexa Multi Room Audio Setup</h1>
 <p><img src="https://i.imgur.com/TF3Gppd.png" alt="Lovelace View for Whole Home Alexa Audio"></p>
 <p>This is just a quick project to setup a way to send and monitor audio with Alexa Multi-Room Music Groups via Lovelace in Home Assistant. There is not a streamlined way to do this, and I hate having to do it through the Alexa app. This helps for times that I don’t want to yell long commands, or even if I want to start music to groups from Home Assistant for when I am arriving home or some other automation purpose.</p>
+<p><strong><strong>You must create the Alexa Multi-Room Music Groups in the Alexa app.</strong></strong></p>
 <h2 id="alexa-media-player-setup">Alexa Media Player Setup</h2>
-<p>This sensor uses the <a href="https://github.com/custom-components/alexa_media_player">Alexa Media Player</a> custom component to interact with my Alexa Devices. I won’t go into detail on setting this up, because I haven’t deviated any from the standard setup for this custom component.</p>
+<p>This project uses the <a href="https://github.com/custom-components/alexa_media_player">Alexa Media Player</a> custom component to interact with my Alexa Devices. I won’t go into detail on setting this up, because I haven’t deviated any from the standard setup for this custom component.</p>
 <p><a href="https://github.com/custom-components/alexa_media_player/wiki#play-in-alexa-groups">There is currently a limitation to Alexa Media Player</a> which can be alleviated using this setup. You can start and stop music to individual echo devices, but you can’t send music directly to an Alexa Multi-Room Music Group. The workaround that I’ve found to be most consistent is sending a custom simulated voice command to Alexa through the component, like “Play Jazz on the Everywhere Music Group.”</p>
 <h2 id="home-assistant-helpers">Home Assistant Helpers</h2>
 <p>I used HA’s helpers to set up an input_select entity and an input_text entity.</p>
